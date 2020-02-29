@@ -23,4 +23,4 @@ echo "updating apache2.conf ..."
 sudo sed -i 's+<Directory /var/www/>+<Directory /home/ubuntu/environment/>+g' /etc/apache2/apache2.conf
 sudo service apache2 restart
 echo "all done!"
-rm -rf ./setup.sh
+sudo rm -rf ./setup.sh
