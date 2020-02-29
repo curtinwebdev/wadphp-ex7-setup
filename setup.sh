@@ -11,7 +11,8 @@ rm -rf ./repo/setup
 mv ./repo/* ./
 rm -rf ./repo
 echo "setting permissions ..."
-sudo chown -R root:www-data /home/ubuntu/environment
+sudo adduser $USER www-data
+sudo chown -R $USER:www-data /home/ubuntu/environment
 sudo find /home/ubuntu/environment -type d -exec chmod 775 {} \;
 echo "updating apache ports ..."
 sudo service apache2 stop
